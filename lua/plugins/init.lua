@@ -1,0 +1,8 @@
+require("plugins.colorscheme")
+require("plugins.treesitter")
+require("plugins.lsp")
+require("plugins.formatter")
+require("plugins.autocomplete")
+require("plugins.autopairs")
+require("plugins.indent")
+require("plugins.gitsigns")
