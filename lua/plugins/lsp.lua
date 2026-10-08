@@ -46,6 +46,15 @@ vim.lsp.config("lua_ls", {
   },
 })
 
+vim.lsp.config("jdtls", {
+  settings = {
+    java = {
+      -- Custom eclipse.jdt.ls options go here
+    },
+  },
+})
+vim.lsp.enable("jdtls")
+
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = { "lua_ls" },

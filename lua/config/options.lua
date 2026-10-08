@@ -1,8 +1,8 @@
-vim.o.number = true
+-- vim.o.number = true
 vim.o.scrolloff = 20
 
 -- Search settings
-vim.o.ignorecase = true
+vim.o.ignorecase = false
 vim.o.smartcase = true
 vim.o.hlsearch = false
 vim.o.incsearch = true
@@ -14,8 +14,22 @@ vim.o.signcolumn = "yes"
 vim.o.showmatch = true
 vim.o.breakindent = true
 vim.o.cursorline = true
-vim.o.statusline = " %f %m %= %{%getcwd()%} "
+vim.opt.ruler = false
 vim.o.showmode = false
+
+-- Horizontal separator
+vim.o.statusline = " "
+local line = "#555555"
+
+vim.api.nvim_set_hl(0, "StatusLine", {
+  fg = line,
+  bg = line,
+})
+
+vim.api.nvim_set_hl(0, "StatusLineNC", {
+  fg = line,
+  bg = line,
+})
 
 -- QOL
 vim.o.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
